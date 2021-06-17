@@ -11,6 +11,18 @@ using namespace std;
 
 int main()
 {
+    /*LAST COMMIT NOTE : project is not finished. the website on which
+    i was asked to make this project advised the students to make many more
+    additions to it, such as handling negative fractions, implementing all the
+    others "needed" operator overloads, optimizing constructors definitions,
+    converting fractions into double values, etc etc. even if it would be 
+    interesting work, the main goal was to give us a better approach of OOP
+    but since I had already been working with OOP projects on C#, Java and
+    other languages for years I decided not to finish it, because 
+    it would be a waste of time. I'll instead focus on more c++ 
+    specific concepts.
+    */
+
     //Reduction test
     cout << " -- Reducing a fraction -- " << endl;
     ZFraction testReduce(4, 20); //.reduce() should return 1/5
