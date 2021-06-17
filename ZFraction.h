@@ -2,17 +2,19 @@
 #include <iostream>
 #include <string>
 #include <math.h>
+#include <ostream>
 
 class ZFraction {
 private:
 	int _num, _denom;
 public:
+	//(de)constructor
 	ZFraction();
 	ZFraction(int num, int denom);
 
-	//behavioural
+	//behaviors
 	void show() const;
-	  //void reduce();
+	void reduce();
 
 	//gets sets
 	inline int getNum() const { return _num; }
@@ -20,6 +22,9 @@ public:
 	inline void setNum(int val) { _num = val; }
 	inline void setDenom(int val) { _denom = val; }
 };
+
+//Calcul du PGCD
+int gcd(int a, int b);
 
 //overload some arithmetic operators
 //+, -, *, /
@@ -30,8 +35,9 @@ ZFraction operator*(ZFraction const& f1, ZFraction const& f2);
 //<, <=, >, >=, ==
 bool operator==(ZFraction const& f1, ZFraction const& f2);
 bool operator<(ZFraction const& f1, ZFraction const& f2);
-//only == and < implementations are need to implement other
+bool operator>=(ZFraction const& f1, ZFraction const& f2);
+//only == and < implementations are needed to implement other
 //operators.
 
-//thought about overloading stream operators (cout, cin)
-//but i think its useless.
+//overload stream operators (only cout)
+std::ostream& operator<<(std::ostream& stream, ZFraction const& ts);
