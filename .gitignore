@@ -236,3 +236,9 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+*.obj
+*.idb
+*.pdb
+*.log
+*.obj
+*.tlog
